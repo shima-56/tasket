@@ -1,24 +1,37 @@
-# README
+# Tasket DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer||
+|nick_name|string||
+|email|||
+|password|||
+### アソシエーション
+- has_many :lists
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+## listsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer||
+|title|||
+|description|||
+|user_id|integer||
 
-* System dependencies
 
-* Configuration
+### アソシエーション
+- belongs_to :user
+- has_many :cards
 
-* Database creation
+ç
+## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer||
+|title |||
+|memo|||
+|list_id|integer||
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### アソシエーション
+- belongs_to :list
