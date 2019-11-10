@@ -1,0 +1,8 @@
+%header.header
+  %nav.nav
+    %ul.header_menu
+      %li.nav_link testさん
+      %li.header_menu_title= link_to "tasket", root_path, class: "nav_link"
+      %ul.header_menu_inner
+        %li= link_to "リストの作成",  "#", class: "nav_link list_new"
+        %li= link_to  "ログアウト" , "#", class: "nav_link"
