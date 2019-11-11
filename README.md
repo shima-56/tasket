@@ -2,10 +2,9 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer||
-|nick_name|string||
-|email|||
-|password|||
+|nick_name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
 ### アソシエーション
 - has_many :lists
 
@@ -16,8 +15,8 @@
 |------|----|-------|
 |id|integer||
 |title|||
-|description|||
-|user_id|integer||
+|description|text||
+|user_id|integer|null: false, foreign_key: true|
 
 
 ### アソシエーション
@@ -30,7 +29,7 @@
 |------|----|-------|
 |id|integer||
 |title |||
-|memo|||
+|memo|text||
 |list_id|integer||
 
 ### アソシエーション
